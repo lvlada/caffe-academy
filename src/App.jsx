@@ -14,6 +14,7 @@ function App() {
   function handleLogin(loginState, logedUser) {
     setIsLogin(loginState);
     setUser(logedUser);
+    
   }
 
   return (
