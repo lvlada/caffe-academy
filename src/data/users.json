@@ -1,0 +1,24 @@
+[
+    {
+      "id": 1,
+      "name": "Petar Petrovic",
+      "email": "petarpetrovic@gmail.com",
+      "password": "petar123",
+      "image": "../../public/petar.png"
+    },
+    {
+      "id": 2,
+      "name": "Mirka Miric",
+      "email": "mirkamiric@gmail.com",
+      "password": "mirka123",
+      "image": "../../public/mirka.png"
+    },
+    {
+      "id": 3,
+      "name": "Admin",
+      "email": "admin@gmail.com",
+      "password": "admin"
+    }
+
+  ]
+  

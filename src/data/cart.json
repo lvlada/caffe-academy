@@ -1,0 +1,16 @@
+[
+    {
+      "id": "1",
+      "cart": [
+        { "naziv": "Espresso kratki", "kolicina": 2, "velicina": "S" },
+        { "naziv": "Americano", "kolicina": 1, "velicina": "M" }
+      ]
+    },
+    {
+      "id": "2",
+      "cart": [
+        { "naziv": "Espresso dugi", "kolicina": 1, "velicina": "M"  },
+        { "naziv": "Espresso kratki sa mlekom", "kolicina": 1, "velicina": "L"  }
+      ]
+    }
+  ]

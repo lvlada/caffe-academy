@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Espresso kratki",
+    "description": "Espresso kratki je kafa koja se pravi od jedne kafene kašičice mlevene kafe i 30 ml vode. Espresso kratki je kafa koja se pije u jednom gutljaju.",
+    "price": 120
+  },
+  {
+    "id": 2,
+    "name": "Espresso dugi",
+    "description":"Espresso dugi je kafa koja se pravi od jedne kafene kašičice mlevene kafe i 60 ml vode. Espresso dugi je kafa koja se pije u jednom gutljaju.",
+    "price": 130
+  },
+  {
+    "id": 3,
+    "name": "Espresso kratki sa mlekom",
+    "description":"Espresso kratki sa mlekom je kafa koja se pravi od jedne kafene kašičice mlevene kafe i 30 ml vode. Espresso kratki sa mlekom je kafa koja se pije u jednom gutljaju.",
+    "price": 140
+  },
+  {
+    "id": 4,
+    "name": "Espresso dugi sa mlekom",
+    "description":"Espresso dugi sa mlekom je kafa koja se pravi od jedne kafene kašičice mlevene kafe i 60 ml vode. Espresso dugi sa mlekom je kafa koja se pije u jednom gutljaju.",
+    "price": 150
+  },
+  {
+    "id": 5,
+    "name": "Americano",
+    "description":"Americano je kafa koja se pravi od jedne kafene kašičice mlevene kafe i 120 ml vode. Ova kafa se pravi u običnoj šolji za kafu. Americano je kafa koja se pije u gutljajima.",
+    "price": 160
+  }
+]
