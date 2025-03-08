@@ -20,6 +20,13 @@
       "email": "admin@gmail.com",
       "password": "admin"
     }
+    {
+      "id": 4,
+      "name": "Bojana Kovacevic",
+      "email": "bojana@gmail.com",
+      "password": "bojana",
+      "image": "/bojana.png"
+    }
 
   ]
   
