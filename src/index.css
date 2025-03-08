@@ -545,3 +545,17 @@ line-height: 8px;
   justify-content: space-between;
   align-items: center;
 }
+
+/* Profil page */
+
+.profil-loyality{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 5px;
+}
+.profil-loyality img{
+  width: 65px;
+  height: 65px;
+
+}
