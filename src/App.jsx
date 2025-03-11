@@ -6,6 +6,8 @@ import { HomePage } from "./components/HomePage";
 import { Login } from "./components/Login";
 import { Profile } from "./components/Profile";
 import { AdminDashboard } from "./components/AdminDashboard";
+import { RegisterPage } from "./components/RegisterPage";
+import { ForgotenPassword } from "./components/ForgotenPassword";
 
 function App() {
   const [isLogin, setIsLogin] = useState(false);
@@ -34,6 +36,8 @@ function App() {
         <Route path="/login" element={<Login checkLogin={handleLogin} />} />
         <Route path="/profile" element={<Profile user={user} />} />
         <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/register" element={<RegisterPage/>} />
+        <Route path="/password-reset" element={<ForgotenPassword />} />
       </Routes>
     </Router>
   );

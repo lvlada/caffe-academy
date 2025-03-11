@@ -60,14 +60,14 @@ export function Login({checkLogin}) {
           </div>
           
           <div className="forgot-your-pass">
-            <a href="">Zaboravili ste lozinku?</a>
+            <a href="/password-reset">Zaboravili ste lozinku?</a>
           </div>
 
           <button className="loginButton" onClick={handleLogin}>Prijavi se</button>
 
           <div className="register-link">
             <p>Još uvek nemate kreiran nalog?</p>
-            <a href="">Registrujte se</a>
+            <a href="/register">Registrujte se</a>
           </div>
 
         </div>
