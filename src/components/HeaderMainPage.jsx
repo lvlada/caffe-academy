@@ -28,7 +28,10 @@ export function HeaderMainPage({ isLogin, userLogin, user}) {
   return (
     <>
       <div className="navBarMainPage">
-        <img src={cafeLogo} className="logo" alt="Cafe Logo" />
+        <div className='navBarMainPage-left'>
+           <img src={cafeLogo} className="logo" alt="Cafe Logo" />
+        </div>
+        <div className='navBarMainPage-right'> 
         {isLogin ? (
           <>
             <img
@@ -51,6 +54,8 @@ export function HeaderMainPage({ isLogin, userLogin, user}) {
             Prijavi se
           </button>
         )}
+        </div>
+
       </div>
     </>
   );
