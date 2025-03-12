@@ -48,7 +48,10 @@ export function RegisterPage() {
 
           <div className="login-link">
             <p>Već imate kreiran nalog?</p>
+            <p>
             <a href="/login">Prijavi se</a>
+            </p>
+            
           </div>
 
         </div>

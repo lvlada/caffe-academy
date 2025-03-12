@@ -67,7 +67,10 @@ export function Login({checkLogin}) {
 
           <div className="register-link">
             <p>Još uvek nemate kreiran nalog?</p>
+            <p>
             <a href="/register">Registrujte se</a>
+            </p>
+       
           </div>
 
         </div>
