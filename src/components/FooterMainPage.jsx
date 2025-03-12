@@ -7,7 +7,7 @@ export function FooterMainPage() {
                     <p>
                         <span>Ukupno: </span>
                         <br />
-                        <span>920,000 RSD</span>
+                        <span>920,00 RSD</span>
                     </p>
                 </div>
                 <div className="footerMain__right">
