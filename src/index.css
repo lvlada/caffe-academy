@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -30,7 +30,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 h1 {
@@ -69,9 +69,9 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
-h6{
+h6 {
   font-weight: 600;
-  font-size: 14px!important;
+  font-size: 14px !important;
 }
 
 .home-page {
@@ -123,7 +123,7 @@ h6{
   margin-right: 15px;
 }
 .coffe-list {
-  flex-grow: 1; 
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -132,7 +132,7 @@ h6{
 
 .coffe-item {
   width: 93%;
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
   font-size: 12px;
   background-color: #164864;
   color: white;
@@ -141,79 +141,73 @@ h6{
   margin-bottom: -5px;
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.20);
+  box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Dodavanje tranzicije */
-
 }
 .coffe-item:hover {
   transform: translateY(-1px); /* Pomeranje kartice nagore */
   box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.3); /* Povećanje senke */
 }
 .coffe-item-button {
-  width: 25px; 
-  height: 25px; 
-  border-radius: 50%; 
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #248CC5; 
-  color: #ffffff; 
-  border: none; 
-  cursor: pointer;  
+  background-color: #248cc5;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
   padding: 0;
-
 }
 
 .coffe-item-button i {
-  font-size: 16px; 
+  font-size: 16px;
 }
 
-.coffe-item-top{
+.coffe-item-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.coffe-item-left{
+.coffe-item-left {
   padding: 0;
   margin: 0;
   width: 45%;
 }
-.coffe-item-left img{
+.coffe-item-left img {
   width: 100%;
-  padding: 0;  
+  padding: 0;
 }
-.coffe-image{
-  margin-top: -15px;;
+.coffe-image {
+  margin-top: -15px;
 }
 
-.coffe-item-right{
+.coffe-item-right {
   width: 80%;
 }
-.coffe-item-right-title{
+.coffe-item-right-title {
   display: flex;
   justify-content: space-between;
 }
-.caffe-description{
+.caffe-description {
   line-height: 13px;
   letter-spacing: -0.32px;
-
-
 }
 
-.coffe-item-right-footer{
-  display: flex;
-  justify-content: space-between;
- 
-
-}
-.coffe-item-right-footer-coffe-size{
+.coffe-item-right-footer {
   display: flex;
   justify-content: space-between;
 }
-.coffe-item-right-footer-coffe-size img{
+.coffe-item-right-footer-coffe-size {
+  display: flex;
+  justify-content: space-between;
+}
+.coffe-item-right-footer-coffe-size img {
   width: 28.67px;
   height: 29.06px;
-  margin-right:10px;
+  margin-right: 10px;
 }
 
 .coffe-item-dropdowns {
@@ -222,34 +216,37 @@ h6{
   margin: 15px 0;
 }
 
-.dropdown-left, .dropdown-right {
+.dropdown-left,
+.dropdown-right {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  
 }
-.dropdown-left fieldset, .dropdown-right fieldset {
-  border: 1px solid white; 
-  font-size: 12px; 
-  color: white; 
-  padding: 5px; 
-  border-radius: 5px; 
-  position: relative; 
-  width: 150px; 
+.dropdown-left fieldset,
+.dropdown-right fieldset {
+  border: 1px solid white;
+  font-size: 12px;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  position: relative;
+  width: 150px;
 }
 
-.dropdown-left legend, .dropdown-right legend {
-  color: white; 
-  font-size: 12px; 
-  padding: 0 5px; 
-  background: #164864; 
-  border-radius: 5px; 
-  position: absolute; 
-  top: -10px; 
-  left: 5px; 
+.dropdown-left legend,
+.dropdown-right legend {
+  color: white;
+  font-size: 12px;
+  padding: 0 5px;
+  background: #164864;
+  border-radius: 5px;
+  position: absolute;
+  top: -10px;
+  left: 5px;
   width: auto;
 }
-.dropdown-left select, .dropdown-right select {
+.dropdown-left select,
+.dropdown-right select {
   border: none;
   padding: 0;
   width: 140px;
@@ -269,7 +266,8 @@ h6{
   color: white;
 }
 
-.dropdown-left label, .dropdown-right label {
+.dropdown-left label,
+.dropdown-right label {
   color: white;
   font-weight: bold;
   position: relative;
@@ -277,26 +275,23 @@ h6{
   background: #164864;
   padding: 0 5px;
 }
-select{
+select {
   color: white;
 }
 
 select:invalid {
-  color: #FAF5E499;
+  color: #faf5e499;
 }
-
 
 .coffe-item-footer {
   display: flex;
   justify-content: space-between;
-
-
 }
 .coffe-item-footer-left {
   display: flex;
   align-items: center;
 }
-.caffe-item-coffe-number{
+.caffe-item-coffe-number {
   margin: 10px;
   font-size: 20px;
 }
@@ -304,32 +299,66 @@ select:invalid {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(180deg, #248CC5, #164864); 
+  background: linear-gradient(180deg, #248cc5, #164864);
   color: #ffffff;
   border: none;
   cursor: pointer;
   padding: 10px;
-  border-radius: 5px; 
-  transition: background 0.3s ease; 
+  border-radius: 5px;
+  transition: background 0.3s ease;
 }
 
 .coffe-item-basket:hover {
-  background: linear-gradient(90deg, #164864, #248CC5); 
+  background: linear-gradient(90deg, #164864, #248cc5);
 }
 .coffe-item-basket i {
-  margin-right: 10px; 
+  margin-right: 10px;
 }
-.footerMain{
+.footer-main {
+  width: 392px;
+  bottom: 0px;
+  background: #248cc5;
+  border-radius: 10px 10px 0 0;
+  padding:10px 20px;
+}
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.footer-button{
+  width: 91.61px;
+  margin: 5px auto;
+  border: 3px solid rgba(255, 255, 255, 0.48);
+  margin-bottom:35px ;
+
+}
+
+.footer-price {
+  text-align: left;
+  color: white;
+  font-weight: 600;
+}
+
+.footer-order-button button {
+  width: 136px;
+  height: 32px;
+  left: 230px;
+  color: white;
+  background: #164864;
+  border-radius: 5px;
+  line-height: 8px;
+}
+.footerMain {
   display: flex;
   flex-shrink: 0;
   width: 392px;
   height: 100px;
   bottom: 0px;
-  background: #248CC5;
+  background: #248cc5;
   border-radius: 10px 10px 0 0;
-  
 }
-.footerMain__left{
+.footerMain__left {
   color: white;
   text-align: left;
   font-weight: 700;
@@ -340,35 +369,33 @@ select:invalid {
 }
 
 .footerMain__right {
-width: 136px;
-height: 32px;
-margin-top:50px;
+  width: 136px;
+  height: 32px;
+  margin-top: 50px;
 }
 
-.footerMain__right button{
-width: 136px;
-height: 32px;
-left: 230px;
-color: white;
-background: #164864;
-border-radius: 5px;
-line-height: 8px;
-
+.footerMain__right button {
+  width: 136px;
+  height: 32px;
+  left: 230px;
+  color: white;
+  background: #164864;
+  border-radius: 5px;
+  line-height: 8px;
 }
 .navBarMainPage .avatar {
-  width: 50px; 
-  height: 50px; 
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   margin-right: 15px;
-
 }
 
 .dropdownMenu {
   position: absolute;
   width: 150px;
-  top: 60px; 
+  top: 60px;
   right: 15px;
-  background: #248CC5;
+  background: #248cc5;
   color: white;
   box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.15);
   border-radius: 6px;
@@ -377,21 +404,21 @@ line-height: 8px;
 }
 
 .dropdownMenu ul {
-  list-style-type: none; 
-  padding: 0; 
-  margin: 0; 
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .dropdownMenu li {
-  padding: 5px 0; 
+  padding: 5px 0;
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: flex-start; 
+  justify-content: flex-start;
 }
 
 .dropdownMenu li i {
-  margin-right: 20px; 
+  margin-right: 20px;
 }
 
 .dropdownMenu li:not(:last-child) {
@@ -399,19 +426,18 @@ line-height: 8px;
 }
 
 .dropdownMenu li:hover {
-  background: #164864; 
+  background: #164864;
 }
 
-
 /* LOGIN PAGE */
-.login-page{
+.login-page {
   width: 391px;
-  height: 800px; 
+  height: 800px;
   left: 0px;
   top: 9px;
   box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.15);
   overflow-y: auto;
-  background: linear-gradient(180deg, #164864, #248CC5)
+  background: linear-gradient(180deg, #164864, #248cc5);
 }
 
 .header-login-page {
@@ -431,7 +457,7 @@ line-height: 8px;
   padding-left: 25px;
   border: none;
   background: #fff;
-}           
+}
 
 .login-form {
   background: #fff;
@@ -463,7 +489,7 @@ line-height: 8px;
   width: 290px;
   margin-left: 25px;
   margin-right: 25px;
-  margin-top: 39.5px;       
+  margin-top: 39.5px;
 }
 
 .input-field .input-field-box {
@@ -489,7 +515,7 @@ line-height: 8px;
   padding-left: 8px;
   color: black;
 }
-.input-field .input-field-box input::placeholder{
+.input-field .input-field-box input::placeholder {
   font-style: italic;
   font-size: 12px;
   color: #7d7d7d;
@@ -509,7 +535,7 @@ line-height: 8px;
 .login-form .loginButton {
   width: 282px;
   height: 41px;
-  background: linear-gradient(180deg, #164864 0.59%, #2C91CA 214.21%);
+  background: linear-gradient(180deg, #164864 0.59%, #2c91ca 214.21%);
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   font-size: 14px;
   color: #fff;
@@ -527,14 +553,14 @@ line-height: 8px;
 }
 
 /* Admin page */
-.admin-page{
+.admin-page {
   width: 391px;
-  height: 800px; 
+  height: 800px;
   left: 0px;
   top: 9px;
   box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.15);
   overflow-y: auto;
-  background: linear-gradient(180deg, #dcdcdd 0%, #f0f0f0 15%, #ffffff 100%); 
+  background: linear-gradient(180deg, #dcdcdd 0%, #f0f0f0 15%, #ffffff 100%);
 }
 .header-admin-page {
   width: 390px;
@@ -556,7 +582,7 @@ line-height: 8px;
 }
 .admin-item {
   width: 92%;
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
   font-size: 12px;
   color: black;
   background-color: #ffffff;
@@ -565,14 +591,14 @@ line-height: 8px;
   margin-bottom: -5px;
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.20);
+  box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .admin-item:hover {
-  transform: translateY(-1px); 
-  box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.3); 
+  transform: translateY(-1px);
+  box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.3);
 }
-.admin-item-header{
+.admin-item-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -580,22 +606,20 @@ line-height: 8px;
 
 /* Profil page */
 
-.profil-loyality{
+.profil-loyality {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 5px;
 }
-.profil-loyality img{
+.profil-loyality img {
   width: 65px;
   height: 65px;
-
 }
-
 
 /* LOGIN, REGISTER, CONFIRMATION, RESET */
 
-.login-page, 
+.login-page,
 .register-page,
 .confirmation-page,
 .forgoten-page {
@@ -605,10 +629,10 @@ line-height: 8px;
   top: 9px;
   box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.15);
   overflow-y: auto;
-  background: linear-gradient(180deg, #164864, #248CC5);
+  background: linear-gradient(180deg, #164864, #248cc5);
 }
 
-.header-login-page, 
+.header-login-page,
 .header-register-page,
 .header-confirmation-page,
 .header-forgoten-page {
@@ -623,10 +647,10 @@ line-height: 8px;
   padding-left: 25px;
   border: none;
   background: #fff;
-}           
+}
 
-.login-form, 
-.register-form, 
+.login-form,
+.register-form,
 .confirmation-form,
 .forgoten-form {
   background: #ffffff;
@@ -640,16 +664,16 @@ line-height: 8px;
 }
 
 .register-form {
-   height: 650px;
-   margin-top: 23.5px;
+  height: 650px;
+  margin-top: 23.5px;
 }
 
 .confirmation-form {
-   height: 683px;
-   margin-top: 23.5px;
+  height: 683px;
+  margin-top: 23.5px;
 }
 
-.login-form .LoginLogo, 
+.login-form .LoginLogo,
 .register-form .LoginLogo,
 .confirmation-form .LoginLogo,
 .forgoten-form .LoginLogo {
@@ -691,10 +715,10 @@ line-height: 8px;
   font-weight: 500;
   font-size: 14px;
   align-items: center;
-  color: #248CC5;
+  color: #248cc5;
   margin-top: 34px;
   margin-bottom: 86px;
-} 
+}
 
 .forgoten-form p {
   margin-top: 16px;
@@ -707,7 +731,7 @@ line-height: 8px;
   width: 290px;
   margin-left: 25px;
   margin-right: 25px;
-  margin-top: 39.5px;       
+  margin-top: 39.5px;
 }
 
 .register-form .input-field {
@@ -761,14 +785,13 @@ line-height: 8px;
   opacity: 100%;
 }
 
-
 .login-form .loginButton,
 .register-form .registerButton,
 .confirmation-form .backToHomePageButton,
 .forgoten-form .resetButton {
   width: 282px;
   height: 41px;
-  background: linear-gradient(180deg, #164864 0.59%, #2C91CA 214.21%);
+  background: linear-gradient(180deg, #164864 0.59%, #2c91ca 214.21%);
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   font-size: 14px;
   color: #fff;
@@ -784,13 +807,13 @@ line-height: 8px;
   margin-bottom: 80px;
 }
 
-.register-link, .login-link {
+.register-link,
+.login-link {
   display: flex;
   align-items: center;
   margin-top: 0;
   font-size: 12px;
   justify-content: space-evenly;
-  height: 11px; 
+  height: 11px;
   margin-top: 20px;
 }
-          
