@@ -30,6 +30,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
@@ -68,6 +69,10 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+h6{
+  font-weight: 600;
+  font-size: 14px!important;
+}
 
 .home-page {
   display: flex;
@@ -84,7 +89,7 @@ button:focus-visible {
 .navBarMainPage {
   position: sticky;
   width: 391px;
-  height: 70px;
+  height: 90px;
   left: -0.5px;
   top: 0px;
   display: flex;
@@ -101,7 +106,6 @@ button:focus-visible {
   height: 22px;
   margin-left: 20px;
 }
-
 .loginButton {
   width: 100px;
   height: 25px;
@@ -127,7 +131,7 @@ button:focus-visible {
 }
 
 .coffe-item {
-  width: 92%;
+  width: 93%;
   margin-bottom: 10px; 
   font-size: 12px;
   background-color: #164864;
@@ -156,7 +160,7 @@ button:focus-visible {
   color: #ffffff; 
   border: none; 
   cursor: pointer;  
-  padding: 0; 
+  padding: 0;
 
 }
 
@@ -176,16 +180,23 @@ button:focus-visible {
 }
 .coffe-item-left img{
   width: 100%;
-  padding: 0;
-  margin-top:-10px;
-  
+  padding: 0;  
 }
+.coffe-image{
+  margin-top: -15px;;
+}
+
 .coffe-item-right{
   width: 80%;
 }
+.coffe-item-right-title{
+  display: flex;
+  justify-content: space-between;
+}
 .caffe-description{
-  line-height: 1.2;
-  margin-top:-5px;
+  line-height: 13px;
+  letter-spacing: -0.32px;
+
 
 }
 
@@ -195,10 +206,20 @@ button:focus-visible {
  
 
 }
+.coffe-item-right-footer-coffe-size{
+  display: flex;
+  justify-content: space-between;
+}
+.coffe-item-right-footer-coffe-size img{
+  width: 28.67px;
+  height: 29.06px;
+  margin-right:10px;
+}
+
 .coffe-item-dropdowns {
   display: flex;
   justify-content: space-between;
-  margin: 10px 0;
+  margin: 15px 0;
 }
 
 .dropdown-left, .dropdown-right {
@@ -256,6 +277,14 @@ button:focus-visible {
   background: #164864;
   padding: 0 5px;
 }
+select{
+  color: white;
+}
+
+select:invalid {
+  color: #FAF5E499;
+}
+
 
 .coffe-item-footer {
   display: flex;
@@ -390,11 +419,11 @@ line-height: 8px;
   height: 60px;
   background: #fff;
 }
-.userLogo{
-  width: 100px;
-  height: 100px;
-  margin-left: auto;
-  margin-top: 20px; ;
+.userLogo {
+  width: 143px;
+  height: 143px;
+  margin: auto;
+  margin-top: 71px;
 }
 .back-button {
   display: flex;
@@ -764,11 +793,4 @@ line-height: 8px;
   height: 11px; 
   margin-top: 20px;
 }
-           
-.userLogo {
-  width: 143px;
-  height: 143px;
-  border: 1px solid #248CC5; /* ovo je samo da prostor za USER AVATAR bude vidljiv */
-  margin: auto;
-  margin-top: 71px;
-}
+          

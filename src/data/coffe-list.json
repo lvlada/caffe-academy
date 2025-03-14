@@ -2,13 +2,13 @@
   {
     "id": 1,
     "name": "Espresso kratki",
-    "description": "Espresso kratki je kafa koja se pravi od jedne kafene kašičice mlevene kafe i 30 ml vode. Espresso kratki je kafa koja se pije u jednom gutljaju.",
+    "description": "Svojom bogatom aromom i punim ukusom, ova mala ali moćna kafica čini savršen početak dana.",
     "price": 120
   },
   {
     "id": 2,
     "name": "Espresso dugi",
-    "description":"Espresso dugi je kafa koja se pravi od jedne kafene kašičice mlevene kafe i 60 ml vode. Espresso dugi je kafa koja se pije u jednom gutljaju.",
+    "description":"Produžena verzija espressa, sa malo više vode, što rezultira blažom notom i produženim uživanjem u kafi.",
     "price": 130
   },
   {
