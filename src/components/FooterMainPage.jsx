@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Collapse from "react-bootstrap/Collapse";
+import { CartItem } from "./CartItem";
 
 export function FooterMainPage() {
   const [open, setOpen] = useState(false);
@@ -27,10 +28,8 @@ export function FooterMainPage() {
         </div>
         <Collapse in={open}>
           <div id="example-collapse-text">
-            <hr />
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-            terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
-            labore wes anderson cred nesciunt sapiente ea proident.
+            <hr className="footer-main-cart-line"/>
+            <CartItem />
           </div>
         </Collapse>
       </div>

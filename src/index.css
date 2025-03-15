@@ -350,46 +350,32 @@ select:invalid {
   border-radius: 5px;
   line-height: 8px;
 }
-.footerMain {
-  display: flex;
-  flex-shrink: 0;
-  width: 392px;
-  height: 100px;
-  bottom: 0px;
-  background: #248cc5;
-  border-radius: 10px 10px 0 0;
-}
-.footerMain__left {
-  color: white;
-  text-align: left;
-  font-weight: 700;
-  margin-left: 25px;
-  width: 195.5px;
-  left: 0px;
-  margin-top: 15px;
-}
 
-.footerMain__right {
-  width: 136px;
-  height: 32px;
-  margin-top: 50px;
-}
-
-.footerMain__right button {
-  width: 136px;
-  height: 32px;
-  left: 230px;
-  color: white;
-  background: #164864;
-  border-radius: 5px;
-  line-height: 8px;
-}
 .navBarMainPage .avatar {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   margin-right: 15px;
 }
+.footer-main-cart-line{
+  color:rgba(255, 255, 255, 0.8)
+}
+.cart-item-list{
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-weight: 500;
+  padding-bottom: 30px;
+}
+.cart-item-list p{
+  margin: 0;
+  padding: 0;
+}
+
+.cart-item-list-name{
+  text-align: left;
+}
+
 
 .dropdownMenu {
   position: absolute;
