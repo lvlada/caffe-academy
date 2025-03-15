@@ -78,7 +78,7 @@ h6 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 392px;
+  width: 393px;
   min-height: 800px;
   max-height: 800px;
   left: 0px;
@@ -128,10 +128,11 @@ h6 {
   flex-direction: column;
   align-items: flex-start;
   overflow-y: auto;
+  width: 385px;
 }
 
 .coffe-item {
-  width: 93%;
+  width: 92%;
   margin-bottom: 10px;
   font-size: 12px;
   background-color: #164864;
@@ -315,7 +316,7 @@ select:invalid {
   margin-right: 10px;
 }
 .footer-main {
-  width: 392px;
+  width: 393px;
   bottom: 0px;
   background: #248cc5;
   border-radius: 10px 10px 0 0;
