@@ -4,7 +4,7 @@ import { HeaderMainPage } from "./HeaderMainPage";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-export function HomePage({ setUser, isLogin, userLogin, user }) {
+export function HomePage({ isLogin, userLogin, user }) {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -17,7 +17,6 @@ export function HomePage({ setUser, isLogin, userLogin, user }) {
     <>
       <div className="home-page">
         <HeaderMainPage
-          setUser={setUser}
           isLogin={isLogin}
           userLogin={userLogin}
           user={user}

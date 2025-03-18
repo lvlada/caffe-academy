@@ -1,9 +1,15 @@
 import { useState } from "react";
 import Collapse from "react-bootstrap/Collapse";
 import { CartItem } from "./CartItem";
+import { useNavigate } from "react-router-dom";
 
 export function FooterMainPage() {
+  const navigate = useNavigate()
   const [open, setOpen] = useState(false);
+
+  function handleOrder(){
+    navigate("/status-page");
+  }
 
   return (
     <>
@@ -23,7 +29,7 @@ export function FooterMainPage() {
             </p>
           </div>
           <div className="footer-order-button">
-            <button>&rarr; Naruči</button>
+            <button onClick={handleOrder}>&rarr; Naruči</button>
           </div>
         </div>
         <Collapse in={open}>

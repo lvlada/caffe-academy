@@ -418,6 +418,69 @@ select:invalid {
   background: #164864;
 }
 
+
+/* STATUS PAGE */
+.status-page {
+  width: 391px;
+  height: 800px;
+  left: 0px;
+  top: 9px;
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.15);
+}
+.status-page-header {
+  width: 390px;
+  height: 60px;
+  background: #fff;
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.15);
+  border-radius: 0px 0px 10px 10px;
+}
+.status-page-id{
+  margin-top: 50px;
+  color: #248CC5;
+}
+
+.status-page-info p{
+  font-size: 24px;
+  font-weight: 700;
+}
+.status-page-time img{
+  width:32.52px;
+  height: 32.52px;
+  margin-top: -10px;
+}
+.status-page-time span{
+  padding-left: 20px;
+ font-size:26px ;
+}
+.status-page-track{
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+.status-page-track img{
+  width: 272px;
+  height: 24px;
+  margin-bottom: 5px;
+}
+.status-page-track-info{
+  display: flex;
+  margin: 0 auto;
+  font-size: 12px;
+  font-weight: 600;
+  justify-content: center;
+  text-align: center;
+
+}
+.status-page-track-info p{
+  width: 126px;
+  text-align: center;
+}
+.status-page-track-info p:nth-child(2){
+  padding: 0 20px;
+}
+.status-page-track-info p:nth-child(3){
+  padding: 0 20px;
+}
+
 /* LOGIN PAGE */
 .login-page {
   width: 391px;
