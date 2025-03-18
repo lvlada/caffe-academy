@@ -565,7 +565,7 @@ select:invalid {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   font-size: 14px;
   padding-left: 8px;
-  color: black;
+  color: black!important;
 }
 .input-field .input-field-box input::placeholder {
   font-style: italic;
@@ -800,17 +800,6 @@ select:invalid {
   color: #164864;
   text-align: left;
   font-style: normal;
-}
-
-.input-field .input-field-box input {
-  height: 37px;
-  width: 282px;
-  background-color: #e8e8e8;
-  border-radius: 6px;
-  border: none;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-  font-size: 14px;
-  padding-left: 8px;
 }
 
 .input-field .input-field-box input::placeholder {
