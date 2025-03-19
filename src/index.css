@@ -567,6 +567,9 @@ select:invalid {
   padding-left: 8px;
   color: black!important;
 }
+.input-field .input-field-box input:focus{
+  outline: 1px solid grey;
+}
 .input-field .input-field-box input::placeholder {
   font-style: italic;
   font-size: 12px;
