@@ -39,7 +39,7 @@ export function RegisterPage() {
             </div>
 
             <div className="input-field-box">
-              <h2>Potvrdite Lozinku</h2>
+              <h2>Potvrdite lozinku</h2>
               <input type="password" placeholder="Potvrdite lozinku" />
             </div>
           </div>

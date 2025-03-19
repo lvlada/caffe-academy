@@ -443,6 +443,16 @@ select:invalid {
   font-size: 24px;
   font-weight: 700;
 }
+.status-page-info {
+  display: flex;
+  flex-direction: column;
+}
+.status-page-info img{
+  width: 320px;
+  height: 250px;
+  margin: 0 auto;
+}
+
 .status-page-time img{
   width:32.52px;
   height: 32.52px;
@@ -454,7 +464,7 @@ select:invalid {
 }
 .status-page-track{
   margin-top: 20px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 .status-page-track img{
   width: 272px;
@@ -479,6 +489,12 @@ select:invalid {
 }
 .status-page-track-info p:nth-child(3){
   padding: 0 20px;
+}
+.status-page-track-info-base{
+  color: #248CC5;
+}
+.status-page-track-info-wait{
+  color: #BFBFBF;
 }
 
 /* LOGIN PAGE */
