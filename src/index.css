@@ -128,7 +128,7 @@ h6 {
   flex-direction: column;
   align-items: flex-start;
   overflow-y: auto;
-  width: 385px;
+  width: 390px;
 }
 
 .coffe-item {
@@ -178,8 +178,9 @@ h6 {
   width: 45%;
 }
 .coffe-item-left img {
-  width: 100%;
+  width: 98.5%;
   padding: 0;
+  margin-left: -7px;
 }
 .coffe-image {
   margin-top: -15px;
@@ -187,19 +188,24 @@ h6 {
 
 .coffe-item-right {
   width: 80%;
+  margin-left: -12px;
+  margin-right: -5px;
 }
 .coffe-item-right-title {
   display: flex;
   justify-content: space-between;
 }
-.caffe-description {
+.caffe-description{
   line-height: 13px;
-  letter-spacing: -0.32px;
+  letter-spacing: -0.38px;
 }
 
 .coffe-item-right-footer {
   display: flex;
   justify-content: space-between;
+}
+.coffe-item-right-footer-price p{
+  margin-top:-5px;
 }
 .coffe-item-right-footer-coffe-size {
   display: flex;

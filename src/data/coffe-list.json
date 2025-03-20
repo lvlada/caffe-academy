@@ -14,19 +14,31 @@
   {
     "id": 3,
     "name": "Espresso kratki sa mlekom",
-    "description":"Espresso kratki sa mlekom je kafa koja se pravi od jedne kafene kašičice mlevene kafe i 30 ml vode. Espresso kratki sa mlekom je kafa koja se pije u jednom gutljaju.",
+    "description":"Intenzivna kafa obogaćena kremastim dodatkom mleka, stvarajući zadovoljavajući i bogat ukus koji osvaja.",
     "price": "140,00"
   },
   {
     "id": 4,
     "name": "Espresso dugi sa mlekom",
-    "description":"Espresso dugi sa mlekom je kafa koja se pravi od jedne kafene kašičice mlevene kafe i 60 ml vode. Espresso dugi sa mlekom je kafa koja se pije u jednom gutljaju.",
+    "description":"Espresso obogaćen mlekom za savršenu harmoniju arome i ukusa. Idealan izbor za one koji vole blaži ukus.",
     "price": "150,00"
   },
   {
     "id": 5,
     "name": "Americano",
-    "description":"Americano je kafa koja se pravi od jedne kafene kašičice mlevene kafe i 120 ml vode. Ova kafa se pravi u običnoj šolji za kafu. Americano je kafa koja se pije u gutljajima.",
+    "description":"Osvežavajući spoj espresso kafe i vruće vode, idealan za laganije uživanje, za bilo koje doba dana.",
+    "price": "150,00"
+  },
+  {
+    "id": 6,
+    "name": "Americano sa mlekom",
+    "description":"Kombinacija laganog osvežavajućeg ukusa americana sa kremastim mlekom, za izvanredno uravnotežen napitak.",
     "price": "160,00"
+  },
+  {
+    "id": 7,
+    "name": "Macchiato",
+    "description":"Ova balansirana kombinacija nudi savršeno iskustvo za one koji vole punoću espressa uz blagi dodir mleka.",
+    "price": "150,00"
   }
 ]

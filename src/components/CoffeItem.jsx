@@ -28,11 +28,23 @@ export function CoffeItem({ coffe }) {
             <p className="caffe-description">{coffe?.description}</p>
             <div className="coffe-item-right-footer">
               {open ? (
+                <>
                 <div className="coffe-item-right-footer-coffe-size">
                   <img src="/S-size.png" alt="Coffe size S" />
                   <img src="/M-size.png" alt="Coffe size M" />
                   <img src="/L-size.png" alt="Coffe size L" />
                 </div>
+                <div>
+                                    <button
+                    className="coffe-item-button"
+                    onClick={() => setOpen(!open)}
+                    aria-controls="example-collapse-text"
+                    aria-expanded={open}
+                  >
+                    <i className="fas fa-minus"></i>
+                  </button>
+                </div>
+                </>
               ) : (
                 <>
                   <div className="coffe-item-right-footer-price">
