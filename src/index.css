@@ -195,6 +195,18 @@ h6 {
   display: flex;
   justify-content: space-between;
 }
+.coffe-item-right-title h6 {
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  max-width: 70%; 
+}
+.coffe-item-right-title.open h6 {
+  white-space: normal; 
+  overflow: visible;
+  text-overflow: clip; 
+  max-width: 100%;
+}
 .caffe-description{
   line-height: 13px;
   letter-spacing: -0.38px;

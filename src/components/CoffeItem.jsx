@@ -13,7 +13,7 @@ export function CoffeItem({ coffe }) {
             <img src={cofeImage} alt="coffe-image" className={open ? null : "coffe-image"} />
           </div>
           <div className="coffe-item-right">
-            <div className="coffe-item-right-title">
+          <div className={`coffe-item-right-title ${!open ? "open" : ""}`}>
             <h6>
               <strong>{coffe?.name}</strong>
               </h6>
