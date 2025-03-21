@@ -1,23 +1,34 @@
+import { Link } from "react-router-dom";
 import backButton from "../assets/back_dugme.png";
 import { useNavigate } from 'react-router-dom';
 import { ProfilLoayality } from './ProfilLoyality';
+import { useAuth } from "./AuthContext";
 
 
 
 
-export function Profile({ user }) {
+export function Profile() {
     const navigate = useNavigate();
-  
+    const {user, userLogin} = useAuth();
+   
     function handleBack() {
       navigate('/');
+    }
+    function handleLogout() {
+      userLogin(false);
     }
 
   return (
     <>
-      <div className="login-page">
+      <div className="status-page">
 
-        <div className="header-login-page">
+        <div className="profil-page-header">
+          <div className="profil-page-header-left">
           <button className="back-button"><img src={backButton} alt="Back Button" onClick={handleBack}/></button>
+          </div>
+          <div className="profil-page-header-right">
+            <Link to="/" onClick={handleLogout}>Log out</Link>
+          </div>
         </div>
 
         <div className="login-form">

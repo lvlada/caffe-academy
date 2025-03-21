@@ -1,14 +1,16 @@
 import { CoffeItem } from "./CoffeItem";
-import data from "../data/coffe-list.json";
 import { useState, useEffect } from "react";
+import { useAuth } from "./AuthContext";
 
 export function CoffeList() {
+    const { data } = useAuth();
     const [coffeList, setCoffeList] = useState(data);
+
 
     useEffect(() => {   
         setCoffeList(data);
     }
-    , []);
+    , [data]);
     return (
         <>
         <div className="coffe-list">

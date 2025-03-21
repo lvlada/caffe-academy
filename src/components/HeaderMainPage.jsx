@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import cafeLogo from "../assets/cafe_logo.png";
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from './AuthContext';
 
 
-export function HeaderMainPage({ isLogin, userLogin, user}) {
+export function HeaderMainPage() {
   const navigate = useNavigate();
+  const {isLogin, userLogin, user} = useAuth()
 
   const [dropdownVisible, setDropdownVisible] = useState(false);
 

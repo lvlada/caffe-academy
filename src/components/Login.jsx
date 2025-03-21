@@ -3,10 +3,12 @@ import backButton from "../assets/back_dugme.png";
 import { useNavigate } from 'react-router-dom';
 import users from "../data/users.json";
 import { useState } from 'react';
+import { useAuth } from "./AuthContext";
 
 
-export function Login({checkLogin}) {
+export function Login() {
 
+  const {handleLogin} = useAuth();
   const navigate = useNavigate();
   const [userEmail, setUserEmail] = useState(null);
   const [userPassword, setUserPassword] = useState(null);
@@ -15,10 +17,10 @@ export function Login({checkLogin}) {
       navigate('/'); 
   }
 
-  function handleLogin() {
+  function handleLoginPage() {
     const user = users.find(user => user.email === userEmail && user.password === userPassword);
     if(user) {
-      checkLogin(true, user);
+      handleLogin(true, user);
       navigate('/');
     } else {
       alert("Pogrešan email ili lozinka");
@@ -63,7 +65,7 @@ export function Login({checkLogin}) {
             <a href="/password-reset">Zaboravili ste lozinku?</a>
           </div>
 
-          <button className="loginButton" onClick={handleLogin}>Prijavi se</button>
+          <button className="loginButton" onClick={handleLoginPage}>Prijavi se</button>
 
           <div className="register-link">
             <p>Još uvek nemate kreiran nalog?</p>

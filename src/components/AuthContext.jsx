@@ -1,4 +1,5 @@
 import { createContext, useState, useContext } from "react";
+import data from "../data/coffe-list.json";
 
 const AuthContext = createContext();
 
@@ -14,6 +15,7 @@ export function AuthProvider({ children }) {
   }
 
   const value = {
+    data,
     user,
     isLogin,
     handleLogin
