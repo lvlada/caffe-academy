@@ -6,16 +6,16 @@ import { useAuth } from './AuthContext';
 
 export function HeaderMainPage() {
   const navigate = useNavigate();
-  const {isLogin, userLogin, user} = useAuth()
+  const {isLogin, user, handleLogin} = useAuth()
 
   const [dropdownVisible, setDropdownVisible] = useState(false);
 
-  function handleLogin() {
+  function handleLoginPage() {
     navigate('/login');
   }
 
   function handleLogout() {
-    userLogin(false);
+    handleLogin(false);
     setDropdownVisible(false);
   }
 
@@ -52,7 +52,7 @@ export function HeaderMainPage() {
             )}
           </>
         ) : (
-          <button className="loginButton" onClick={handleLogin}>
+          <button className="loginButton" onClick={handleLoginPage}>
             Prijavi se
           </button>
         )}
