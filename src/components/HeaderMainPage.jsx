@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import cafeLogo from "../assets/cafe_logo.png";
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from './AuthContext';
@@ -9,6 +9,7 @@ export function HeaderMainPage() {
   const {isLogin, user, handleLogin} = useAuth()
 
   const [dropdownVisible, setDropdownVisible] = useState(false);
+  const dropdownRef = useRef(null);
 
   function handleLoginPage() {
     navigate('/login');
@@ -26,6 +27,18 @@ export function HeaderMainPage() {
   function toggleDropdown() {
     setDropdownVisible(!dropdownVisible);
   }
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownVisible(false);
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [dropdownRef])
 
   return (
     <>
@@ -43,7 +56,7 @@ export function HeaderMainPage() {
               onClick={toggleDropdown}
             />
             {dropdownVisible && (
-              <div className="dropdownMenu">
+              <div className="dropdownMenu" ref={dropdownRef}>
                 <ul>
                   <li onClick={handleProfile}><i className='fas fa-user' > </i>  Profil</li>
                   <li onClick={handleLogout}> <i className='fas fa-sign-out-alt'></i>  Odjavi se</li>
