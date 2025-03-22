@@ -36,7 +36,7 @@ export function Profile() {
           <h2>{user?.name || "Nema imena korisnika"}</h2>
            <p>{user?.email || "Nema email korisnika"}</p>
 
-           <h3>Loyality program</h3>
+           <h3>Loyalty program</h3>
            <p>Pridružite se našem loyalty programu i uživajte u besplatnoj kafi! Svaka deseta kafa je na naš račun kao nagrada za vašu vernost.</p>
            <ProfilLoayality />
 
