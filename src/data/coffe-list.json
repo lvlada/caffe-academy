@@ -3,42 +3,63 @@
     "id": 1,
     "name": "Espresso kratki",
     "description": "Svojom bogatom aromom i punim ukusom, ova mala ali moćna kafica čini savršen početak dana.",
-    "price": "120,00"
+    "priceS": "120,00",
+    "priceM": "130,00",
+    "priceL": "140,00",
+    "milkOption": false
   },
   {
     "id": 2,
     "name": "Espresso dugi",
-    "description":"Produžena verzija espressa, sa malo više vode, što rezultira blažom notom i produženim uživanjem u kafi.",
-    "price": "130,00"
+    "description": "Produžena verzija espressa, sa malo više vode, što rezultira blažom notom i produženim uživanjem u kafi.",
+    "priceS": "130,00",
+    "priceM": "140,00",
+    "priceL": "150,00",
+    "milkOption": false
   },
   {
     "id": 3,
     "name": "Espresso kratki sa mlekom",
-    "description":"Intenzivna kafa obogaćena kremastim dodatkom mleka, stvarajući zadovoljavajući i bogat ukus koji osvaja.",
-    "price": "140,00"
+    "description": "Intenzivna kafa obogaćena kremastim dodatkom mleka, stvarajući zadovoljavajući i bogat ukus koji osvaja.",
+    "priceS": "140,00",
+    "priceM": "150,00",
+    "priceL": "160,00",
+    "milkOption": true
   },
   {
     "id": 4,
     "name": "Espresso dugi sa mlekom",
-    "description":"Espresso obogaćen mlekom za savršenu harmoniju arome i ukusa. Idealan izbor za one koji vole blaži ukus.",
-    "price": "150,00"
+    "description": "Espresso obogaćen mlekom za savršenu harmoniju arome i ukusa. Idealan izbor za one koji vole blaži ukus.",
+    "priceS": "150,00",
+    "priceM": "160,00",
+    "priceL": "170,00",
+    "milkOption": true
   },
   {
     "id": 5,
     "name": "Americano",
-    "description":"Osvežavajući spoj espresso kafe i vruće vode, idealan za laganije uživanje, za bilo koje doba dana.",
-    "price": "150,00"
+    "description": "Osvežavajući spoj espresso kafe i vruće vode, idealan za laganije uživanje, za bilo koje doba dana.",
+    "priceS": "150,00",
+    "priceM": "160,00",
+    "priceL": "170,00",
+    "milkOption": false
   },
   {
     "id": 6,
     "name": "Americano sa mlekom",
-    "description":"Kombinacija laganog osvežavajućeg ukusa americana sa kremastim mlekom, za izvanredno uravnotežen napitak.",
-    "price": "160,00"
+    "description": "Kombinacija laganog osvežavajućeg ukusa americana sa kremastim mlekom, za izvanredno uravnotežen napitak.",
+    "priceS": "160,00",
+    "priceM": "170,00",
+    "priceL": "180,00",
+    "milkOption": true
   },
   {
     "id": 7,
     "name": "Macchiato",
-    "description":"Ova balansirana kombinacija nudi savršeno iskustvo za one koji vole punoću espressa uz blagi dodir mleka.",
-    "price": "150,00"
+    "description": "Ova balansirana kombinacija nudi savršeno iskustvo za one koji vole punoću espressa uz blagi dodir mleka.",
+    "priceS": "150,00",
+    "priceM": "160,00",
+    "priceL": "170,00",
+    "milkOption": true
   }
 ]

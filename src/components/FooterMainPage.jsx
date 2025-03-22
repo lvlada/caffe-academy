@@ -2,13 +2,17 @@ import { useState } from "react";
 import Collapse from "react-bootstrap/Collapse";
 import { CartItem } from "./CartItem";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "./AuthContext";
 
 export function FooterMainPage() {
   const navigate = useNavigate()
+  const {setCart, totalPrice, setOrderId} = useAuth();
   const [open, setOpen] = useState(false);
 
   function handleOrder(){
     navigate("/status-page");
+    setCart([]);
+    setOrderId(1);
   }
 
   return (
@@ -25,7 +29,7 @@ export function FooterMainPage() {
             <p>
               <span>Ukupno: </span>
               <br />
-              <span>920,00 RSD</span>
+              <span>{totalPrice} RSD</span>
             </p>
           </div>
           <div className="footer-order-button">

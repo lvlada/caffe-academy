@@ -207,6 +207,9 @@ h6 {
   text-overflow: clip; 
   max-width: 100%;
 }
+.coffe-item-right-footer-coffe-size img.selected {
+  filter: brightness(0.8); /* Promena boje */
+}
 .caffe-description{
   line-height: 13px;
   letter-spacing: -0.38px;
@@ -395,7 +398,9 @@ select:invalid {
 .cart-item-list-name{
   text-align: left;
 }
-
+.cart-item-list-remove{
+  cursor: pointer;
+}
 
 .dropdownMenu {
   position: absolute;

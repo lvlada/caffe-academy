@@ -4,11 +4,13 @@ import resetFirstStep from "../assets/reset-1.png";
 import { useNavigate } from "react-router-dom";
 
 
+
 export function ForgotenPassword() {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
 function handleBack(){
     navigate('/login');
+
 }
   return (
     <>

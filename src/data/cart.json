@@ -1,16 +1,18 @@
 [
     {
       "id": "1",
+      "idUser" : "2",
       "cart": [
-        { "naziv": "Espresso kratki", "kolicina": 2, "velicina": "S" },
-        { "naziv": "Americano", "kolicina": 1, "velicina": "M" }
+        { "name": "Espresso kratki", "quantity": 2, "size": "S", "coffeeType": "Brazil", "milk": "", "price": "120,00" },
+        { "name": "Americano", "quantity": 1, "size": "M",  "coffeeType": "Brazil", "mleko": "", "cena": "160,00"  }
       ]
     },
     {
       "id": "2",
+      "idUser": "1",
       "cart": [
-        { "naziv": "Espresso dugi", "kolicina": 1, "velicina": "M"  },
-        { "naziv": "Espresso kratki sa mlekom", "kolicina": 1, "velicina": "L"  }
+        { "name": "Espresso dugi", "quantity": 1, "size": "M",  "coffeeType": "Brazil", "milk": "Obicno mleko", "price": "140,00" },
+        { "name": "Espresso kratki sa mlekom", "quantity": 2, "size": "L",  "coffeeType": "Brazil", "milk": "Sojino mleko", "price": "160,00" }
       ]
     }
   ]
