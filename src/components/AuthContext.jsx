@@ -51,6 +51,8 @@ export function AuthProvider({ children }) {
     setCart(newCart);
   }
 
+  
+
   const value = {
     data,
     user,

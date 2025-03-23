@@ -7,7 +7,11 @@ export function RegisterPage() {
   const navigate = useNavigate();
 
   function handleBack(){
-    navigate("/login")
+    navigate("/login");
+  }
+
+  function handleConfirmation(){
+    navigate("/confirmation-page");
   }
 
   return (
@@ -44,7 +48,7 @@ export function RegisterPage() {
             </div>
           </div>
 
-          <button className="registerButton">Registruj se</button>
+          <button className="registerButton" onClick={handleConfirmation}>Registruj se</button>
 
           <div className="login-link">
             <p>Već imate kreiran nalog?</p>

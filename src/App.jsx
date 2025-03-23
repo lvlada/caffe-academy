@@ -9,6 +9,7 @@ import { AdminDashboard } from "./components/AdminDashboard";
 import { RegisterPage } from "./components/RegisterPage";
 import { ForgotenPassword } from "./components/ForgotenPassword";
 import { StatusPage } from "./components/StatusPage";
+import { Confirmation } from "./components/Confirmation";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/password-reset" element={<ForgotenPassword />} />
           <Route path="/status-page" element={<StatusPage />} />
+          <Route path="/confirmation-page" element={<Confirmation />} />
         </Routes>
       </Router>
     </AuthProvider>
