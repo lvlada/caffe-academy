@@ -383,16 +383,16 @@ select:invalid {
 .footer-main-cart-line{
   color:rgba(255, 255, 255, 0.8)
 }
+.cart-item{
+  padding-bottom: 30px;
+
+}
 .cart-item-list{
   display: flex;
   justify-content: space-between;
   color: white;
   font-weight: 500;
-  padding-bottom: 30px;
-}
-.cart-item-list p{
-  margin: 0;
-  padding: 0;
+  margin-bottom: -12px;
 }
 
 .cart-item-list-name{

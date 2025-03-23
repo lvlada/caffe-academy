@@ -1,16 +1,16 @@
 import { CartItemList } from "./CartItemList";
 import { useAuth } from "./AuthContext";
 
-export function CartItem(){
+export function CartItem() {
+  const { cart } = useAuth();
 
-    const {cart} = useAuth();
+  return (
 
-    return(
-        <>
-        {cart.map((item) =>(
-              <CartItemList key={item.id} item={item}/>
+      <div className="cart-item">
+        {cart.map((item) => (
+          <CartItemList key={item.id} item={item} />
         ))}
+      </div>
 
-        </>
-    )
+  );
 }
