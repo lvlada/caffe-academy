@@ -176,7 +176,7 @@ export function CoffeItem({ coffe }) {
                       required
                       disabled={!isMilk}
                       onChange={handleTypeChangeMilk}
-                      value={typeOfCoffe}
+                      value={typeOfMilk}
                     >
                       <option value="" selected hidden>
                         Odaberi mleko
