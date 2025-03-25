@@ -401,6 +401,45 @@ select:invalid {
 .cart-item-list-remove{
   cursor: pointer;
 }
+.modal-confirmation{
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  width: 314px!important;
+  height: 140px;
+  margin-left: 41%;
+}
+.modal-confirmation-body {
+  background-color: #248CC5;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+ .modal-items{
+  display: flex;
+  background-color: #248CC5;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px;
+  align-items:center ;
+  justify-content: center;
+  gap:50px
+  
+}
+.modal-items button{
+  width: 67px!important;
+}
+.modal-button-left{
+  background: white!important;
+  color: #164864!important;
+}
+.modal-button-right{
+  background: #164864!important;
+  color: white!important;
+}
 
 .dropdownMenu {
   position: absolute;

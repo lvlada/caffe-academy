@@ -43,6 +43,7 @@ export function FooterMainPage() {
             <CartItem />
           </div>
         </Collapse>
+      
       </div>
     </>
   );

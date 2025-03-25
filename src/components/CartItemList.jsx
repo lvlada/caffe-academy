@@ -1,4 +1,5 @@
 import { useAuth } from "./AuthContext";
+import { ModalConfirmation } from "./Modal";
 
 export function CartItemList({ order }) { // Sada primamo `order`, a ne `item`
   const { handleDelete } = useAuth();
@@ -10,9 +11,8 @@ export function CartItemList({ order }) { // Sada primamo `order`, a ne `item`
         <p>{order.quantity} X {order.name}</p>
       </div>
 
-      <div className="cart-item-list-remove">
-        <p onClick={() => handleDelete(order.orderId)}><strong>x</strong></p>
-      </div>
+
+      <ModalConfirmation order ={order}/>
     </div>
   );
 }
