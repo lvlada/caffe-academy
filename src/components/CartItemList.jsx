@@ -1,8 +1,6 @@
-import { useAuth } from "./AuthContext";
 import { ModalConfirmation } from "./Modal";
 
 export function CartItemList({ order }) { // Sada primamo `order`, a ne `item`
-  const { handleDelete } = useAuth();
   console.log("Iz footera: ", order.orderId)
 
   return (
