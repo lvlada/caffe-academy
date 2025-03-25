@@ -6,13 +6,14 @@ import { useAuth } from "./AuthContext";
 
 export function FooterMainPage() {
   const navigate = useNavigate()
-  const {setCart, totalPrice, setOrderId} = useAuth();
+  const {setCart, totalPrice, setOrderId, handleAllCarts} = useAuth();
   const [open, setOpen] = useState(false);
 
   function handleOrder(){
     navigate("/status-page");
+    handleAllCarts();
+    setOrderId(new Date());
     setCart([]);
-    setOrderId(1);
   }
 
   return (

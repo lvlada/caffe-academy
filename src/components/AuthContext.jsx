@@ -11,6 +11,15 @@ export function AuthProvider({ children }) {
   const [cart, setCart] = useState([]);
   const [orderId, setOrderId] = useState(1);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [idCart, setIdCart] = useState(0);
+  const [allCarts, setAllCarts] = useState(() => {
+    const savedCarts = sessionStorage.getItem('allCarts');
+    return savedCarts ? JSON.parse(savedCarts) : [];
+  });
+
+  useEffect(() => {
+    sessionStorage.setItem('allCarts', JSON.stringify(allCarts));
+  }, [allCarts]);
 
 
 
@@ -23,34 +32,48 @@ export function AuthProvider({ children }) {
     console.log(newOrder);
     handleCart(newOrder);
   }
-  
-  function handleCart(newOrder){
+
+  function handleCart(newOrder) {
     const cartItem = {
       id: Date.now(),
       idUser: user?.id,
-      order: newOrder
-    }
-    const updatedCart = [...cart, cartItem];
-    setCart(updatedCart);
+      orders: [...cart.flatMap(item => item.orders), newOrder]
+    };
   
+    setCart([cartItem]); 
+    setIdCart(cartItem.id);
   }
   useEffect(() => {
     handleTotalPrice();
+    console.log("Cart items: ",cart);
   }, [cart]);
 
   function handleTotalPrice() {
-    const calTotal = cart.reduce((total, item) => {
-      const price = parseFloat(item.order.price);
-      return total + price * item.order.quantity;
+    const calTotal = cart.reduce((total, cartItem) => {
+      return total + cartItem.orders.reduce((sum, order) => {
+        return sum + (parseFloat(order.price) * (order.quantity || 1)); 
+      }, 0);
     }, 0);
+  
     setTotalPrice(calTotal.toLocaleString('sr-RS', { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
   }
 
   function handleDelete(orderId) {
-    const newCart = cart.filter((item) => item.order.orderId !== orderId);
+    const newCart = cart
+      .map((cartItem) => ({
+        ...cartItem,
+        orders: cartItem.orders.filter((order) => order.orderId !== orderId),
+      }))
+      .filter((cartItem) => cartItem.orders.length > 0); 
+  
     setCart(newCart);
   }
+  
 
+  function handleAllCarts() {
+    const updateAllCarts = allCarts.concat(cart);
+    setAllCarts(updateAllCarts);
+  }
   
 
   const value = {
@@ -60,11 +83,15 @@ export function AuthProvider({ children }) {
     cart,
     totalPrice,
     orderId,
+    allCarts,
+    idCart,
     setOrderId,
     setCart,
+    setIdCart,
     handleLogin,
     handleOrder,  
-    handleDelete
+    handleDelete,
+    handleAllCarts
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

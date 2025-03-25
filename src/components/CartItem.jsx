@@ -5,12 +5,12 @@ export function CartItem() {
   const { cart } = useAuth();
 
   return (
-
-      <div className="cart-item">
-        {cart.map((item) => (
-          <CartItemList key={item.id} item={item} />
-        ))}
-      </div>
-
+    <div className="cart-item">
+      {cart.flatMap((cartItem) => 
+        cartItem.orders.map((order) => (
+          <CartItemList key={order.id} order={order} /> 
+        ))
+      )}
+    </div>
   );
 }

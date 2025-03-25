@@ -8,9 +8,13 @@ import CoffeStatusMidd from "../assets/CoffeStatusMidd.png"
 import CoffeStatusFinal from "../assets/CoffeStatusFinal.png"
 import HalfwayStatus from "../assets/HalfwayStatus.gif";
 import ReadyStatus from "../assets/ReadyStatus.gif";
+import { useAuth } from "./AuthContext";
 
 export function StatusPage() {
   const navigate = useNavigate();
+  const {idCart} = useAuth();
+ 
+
   const [time, setTime] = useState(30); // 15 minuta u sekundama - 900
   const [statusMessage, setStatusMessage] = useState("Porudzbina primljena");
   const [statusImage, setStatusImage] = useState(orderPlaced);
@@ -63,7 +67,7 @@ export function StatusPage() {
           <p>
             ID porudžbine:{" "}
             <span>
-              <strong>125479</strong>
+              <strong>{idCart}</strong>
             </span>
           </p>
         </div>

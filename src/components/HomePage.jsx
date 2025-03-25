@@ -18,11 +18,7 @@ export function HomePage() {
   return (
     <>
       <div className="home-page">
-        <HeaderMainPage
-          // isLogin={isLogin}
-          // userLogin={userLogin}
-          // user={user}
-        />
+        <HeaderMainPage/>
         <CoffeList />
         <FooterMainPage />
       </div>
