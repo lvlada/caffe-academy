@@ -23,8 +23,8 @@ function handleForward(){
 
         <div className="forgoten-form">
           <img src={cafeLogo} className="LoginLogo" alt="Cafe Logo" />
-          <h2>Zaboravili ste lozinku?</h2>
-          <p>Unesite svoju email adresu i mi ćemo Vam <br />poslati instrukcije za resetovanje</p>
+          <h2>Postavi novu lozinku</h2>
+          <p>Lozinka mora da sadrži najmanje 8 karaktera</p>
 
           <div className="input-field">
             <div className="input-field-box">
