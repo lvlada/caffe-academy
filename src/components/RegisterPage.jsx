@@ -6,6 +6,11 @@ import Alert from "../assets/Alert.png";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 import users from "../data/users.json";
+import { use } from "react";
+
+
+const message = "Neispravan unos emaila";
+const message2 = "Vec postoji nalog sa ovom email adresom";
 
 export function RegisterPage() {
   const navigate = useNavigate();
@@ -17,6 +22,7 @@ export function RegisterPage() {
 
   const [errorMessageName, setErrorMessageName] = useState(false);
   const [errorMessageEmail, setErrorMessageEmail] = useState(false);
+  const [errorMessageInfo, setEerrorMessageInfo]= useState(message);
   const [errorMessagePassword, setErrorMessagePassword] = useState(false);
   const [
     errorMessagePasswordConfirmation,
@@ -44,6 +50,7 @@ export function RegisterPage() {
       isValid = false;
     } else if (userCheck) {
         setErrorMessageEmail(true);
+        setEerrorMessageInfo(message2)
      } else{
       setErrorMessageEmail(false);
      }
@@ -131,8 +138,7 @@ export function RegisterPage() {
             {errorMessageEmail ? (
               <div className="login-form-alert-message">
                 <p>
-                  <img src={Alert} alt="" /> Već postoji nalog sa ovom email
-                  adresom
+                  <img src={Alert} alt="" /> {errorMessageInfo}
                 </p>
               </div>
             ) : null}

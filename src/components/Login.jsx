@@ -47,7 +47,7 @@ export function Login() {
               <h2>Email</h2>
               <input
                 type="text"
-                placeholder="Unesite Email adresu"
+                placeholder="Unesite email adresu"
                 name="email"
                 onChange={(e) => setUserEmail(e.target.value)}
               />
