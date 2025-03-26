@@ -42,8 +42,7 @@ export function RegisterPage() {
     if (!emailRegex.test(email) || !email.endsWith(".com")) {
       setErrorMessageEmail(true);
       isValid = false;
-    } 
-    if (userCheck) {
+    } else if (userCheck) {
         setErrorMessageEmail(true);
      } else{
       setErrorMessageEmail(false);
