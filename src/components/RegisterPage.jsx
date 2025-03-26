@@ -106,7 +106,7 @@ export function RegisterPage() {
             >
               <input
                 type="text"
-                placeholder="Unesite Ime i prezime"
+                placeholder="Unesite ime i prezime"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
