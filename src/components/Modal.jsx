@@ -27,7 +27,7 @@ export function ModalConfirmation({order}) {
 
       <Modal show={show} onHide={handleClose} className="modal-confirmation"  dialogClassName="modal-dialog-centered">
         <Modal.Body className="modal-confirmation-body">
-          Da li ste sigurni da želite da pormenite status porudzbine ?
+          Da li ste sigurni da želite da promenite status porudzbine ?
         </Modal.Body>
         <div className="modal-items">
           <Button variant="secondary" onClick={handleClose} className="modal-button-left">

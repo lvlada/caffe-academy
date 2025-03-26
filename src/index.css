@@ -569,6 +569,31 @@ select:invalid {
   overflow-y: auto;
   background: linear-gradient(180deg, #164864, #248cc5);
 }
+.login-form-alert-message{
+  font-size: 11px;
+  color: #EE3C3C;
+  width: 290px;
+  padding-top: 10px;
+  margin-left:5px;
+  text-align: left;
+  margin-bottom: -30px;
+}
+.login-form-alert-message2{
+  font-size: 11px;
+  color: #EE3C3C;
+  width: 290px;
+  padding-top: 10px;
+  margin-bottom: -35px;
+}
+.login-form-alert-message-fix{
+  margin-left: 28px;
+  margin-right: -5px;
+  margin-bottom: -18px;
+}
+.tooltip{
+  background-color: #E8E8E8!important;
+  color:#404040!important;
+}
 
 .header-login-page {
   width: 390px;
