@@ -727,6 +727,7 @@ select:invalid {
 }
 
 /* Admin page */
+
 .admin-page {
   width: 391px;
   height: 800px;
@@ -742,7 +743,12 @@ select:invalid {
   background: #fff;
   margin-bottom: 30px;
 }
+.admin-dashboard > a{
+  display: block;
+  color: #248CC5!important;
+  margin-bottom: 10px;
 
+}
 .header-admin-page img {
   width: 160px;
   height: 30px;
@@ -834,9 +840,10 @@ select:invalid {
   padding-right:20px;
   color: #248CC5;
 }
-.profil-page-header-right a{
+.profil-page-header-right .logut a{
   color: #248CC5!important;
 }
+
 .profil-loyality {
   display: flex;
   flex-wrap: wrap;

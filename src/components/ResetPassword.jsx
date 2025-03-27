@@ -2,9 +2,6 @@ import cafeLogo from "../assets/cafe_logo.png";
 import backButton from "../assets/back_dugme.png";
 import resetFirstStep from "../assets/reset-2.png";
 
-
-
-
 export function ResetPassword({back, forward}) {
 
 

@@ -1,14 +1,20 @@
 import CaffeLogo from "../assets/cafe_logo.png";
+import { Link } from "react-router-dom";
 import { AdminDashboardTable } from "./AdminDashboardTable";
 import { useAuth } from "./AuthContext";
 import { useNavigate } from "react-router-dom";
+
 export function AdminDashboard() {
   const navigate = useNavigate();
 
-  const { allCarts, user } = useAuth();
+  const { allCarts, user, userLogin } = useAuth();
 
   if (user === null) {
     navigate("/login");
+  }
+
+  function handleLogout() {
+    userLogin(false);
   }
   return (
     <>
@@ -17,6 +23,7 @@ export function AdminDashboard() {
           <img src={CaffeLogo} alt="Cafe logo" />
         </div>
         <div className="admin-dashboard">
+        <Link to="/" onClick={handleLogout} className="admin-page-logout">Log out</Link>
           <h4>Status porudženice</h4>
           <table className="admin-dashboard-table">
             <tr>
