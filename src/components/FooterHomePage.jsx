@@ -1,19 +1,39 @@
 import { useState } from "react";
 import Collapse from "react-bootstrap/Collapse";
-import { CartItem } from "./CartItem";
+import { CartItemList } from "./CartItemList";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "./AuthContext";
+import { ModalLoginInfo } from "./ModalLoginInfo";
 
-export function FooterMainPage() {
+const message = "Morate se prvo logovati da bi naručili kafu!"
+
+export function FooterHomePage() {
   const navigate = useNavigate()
-  const {setCart, totalPrice, setOrderId, handleAllCarts} = useAuth();
+  const {cart, setCart, totalPrice, setOrderId, handleAllCarts, user} = useAuth();
   const [open, setOpen] = useState(false);
+  const [isModal, setIsModal] = useState(false);
+  const [modalMessage, setModalMessage] = useState(message);
 
   function handleOrder(){
-    navigate("/status-page");
-    handleAllCarts();
-    setOrderId(new Date());
-    setCart([]);
+    if(user){
+      if( cart.length > 0){
+        navigate("/status-page");
+        handleAllCarts();
+        setOrderId(new Date());
+        setCart([]);
+        setIsModal(false);
+      } else{
+        setModalMessage("Niste nista narucili!");
+        setIsModal(true);
+      }
+    } else{
+      setIsModal(true);
+      setModalMessage(message);
+    }
+  }
+
+  function handleModal(modal){
+    setIsModal(modal);
   }
 
   return (
@@ -40,9 +60,11 @@ export function FooterMainPage() {
         <Collapse in={open}>
           <div id="example-collapse-text">
             <hr className="footer-main-cart-line"/>
-            <CartItem />
+            <CartItemList />
           </div>
         </Collapse>
+
+        {isModal &&  <ModalLoginInfo modalInfo = {handleModal} isModal = {isModal} modalMessage = {modalMessage}/> }
       
       </div>
     </>

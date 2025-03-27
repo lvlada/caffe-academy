@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from './AuthContext';
 
 
-export function HeaderMainPage() {
+export function HeaderHomePage() {
   const navigate = useNavigate();
   const {isLogin, user, handleLogin} = useAuth()
 

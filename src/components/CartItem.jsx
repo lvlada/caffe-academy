@@ -1,16 +1,15 @@
-import { CartItemList } from "./CartItemList";
-import { useAuth } from "./AuthContext";
+import { ModalDeleteConfirmation } from "./ModalDeleteConfirmation";
 
-export function CartItem() {
-  const { cart } = useAuth();
-
+export function CartItem({order }) {
   return (
-    <div className="cart-item">
-      {cart.flatMap((cartItem) => 
-        cartItem.orders.map((order) => (
-          <CartItemList key={order.id} order={order} /> 
-        ))
-      )}
+    <div className="cart-item-list">
+      <div className="cart-item-list-name">
+        <p>
+          {order.quantity} X {order.name}
+        </p>
+      </div>
+
+      <ModalDeleteConfirmation order={order} />
     </div>
   );
 }

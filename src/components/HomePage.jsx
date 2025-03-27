@@ -1,7 +1,7 @@
 import { useAuth } from "./AuthContext";
 import { CoffeList } from "./CoffeList";
-import { FooterMainPage } from "./FooterMainPage";
-import { HeaderMainPage } from "./HeaderMainPage";
+import { FooterHomePage } from "./FooterHomePage";
+import { HeaderHomePage } from "./HeaderHomePage";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -18,9 +18,9 @@ export function HomePage() {
   return (
     <>
       <div className="home-page">
-        <HeaderMainPage/>
+        <HeaderHomePage/>
         <CoffeList />
-        <FooterMainPage />
+        <FooterHomePage />
       </div>
     </>
   );

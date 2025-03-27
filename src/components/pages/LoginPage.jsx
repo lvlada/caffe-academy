@@ -1,12 +1,12 @@
-import cafeLogo from "../assets/cafe_logo.png";
-import backButton from "../assets/back_dugme.png";
-import Alert from "../assets/Alert.png";
+import cafeLogo from "../../assets/cafe_logo.png";
+import backButton from "../../assets/back_dugme.png";
+import Alert from "../../assets/Alert.png";
 import { useNavigate } from "react-router-dom";
-import users from "../data/users.json";
+import users from "../../data/users.json";
 import { useState } from "react";
-import { useAuth } from "./AuthContext";
+import { useAuth } from "../AuthContext";
 
-export function Login() {
+export function LoginPage() {
   const { handleLogin } = useAuth();
   const navigate = useNavigate();
   const [userEmail, setUserEmail] = useState(null);

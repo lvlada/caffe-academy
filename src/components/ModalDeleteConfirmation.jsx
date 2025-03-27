@@ -3,7 +3,7 @@ import Modal from "react-bootstrap/Modal";
 import { useState } from "react";
 import { useAuth } from "./AuthContext";
 
-export function ModalConfirmation({order}) {
+export function ModalDeleteConfirmation({order}) {
   const { handleDelete } = useAuth();
 
   const [show, setShow] = useState(false);

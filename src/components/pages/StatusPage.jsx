@@ -1,21 +1,21 @@
 import { useState, useEffect } from "react";
-import backButton from "../assets/back_dugme.png";
+import backButton from "../../assets/back_dugme.png";
 import { useNavigate } from "react-router-dom";
-import orderPlaced from "../assets/OrderPlaced.gif";
-import Vector from "../assets/Vector.png";
-import CoffeStatus from "../assets/CoffeStatus.png";
-import CoffeStatusMidd from "../assets/CoffeStatusMidd.png"
-import CoffeStatusFinal from "../assets/CoffeStatusFinal.png"
-import HalfwayStatus from "../assets/HalfwayStatus.gif";
-import ReadyStatus from "../assets/ReadyStatus.gif";
-import { useAuth } from "./AuthContext";
+import orderPlaced from "../../assets/OrderPlaced.gif";
+import Vector from "../../assets/Vector.png";
+import CoffeStatus from "../../assets/CoffeStatus.png";
+import CoffeStatusMidd from "../../assets/CoffeStatusMidd.png"
+import CoffeStatusFinal from "../../assets/CoffeStatusFinal.png"
+import HalfwayStatus from "../../assets/HalfwayStatus.gif";
+import ReadyStatus from "../../assets/ReadyStatus.gif";
+import { useAuth } from "../AuthContext";
 
 export function StatusPage() {
   const navigate = useNavigate();
-  const {idCart} = useAuth();
+  const {idCart, setIdCart} = useAuth();
  
 
-  const [time, setTime] = useState(30); // 15 minuta u sekundama - 900
+  const [time, setTime] = useState(30);
   const [statusMessage, setStatusMessage] = useState("Porudzbina primljena");
   const [statusImage, setStatusImage] = useState(orderPlaced);
   const [progressImage, setProgressImage] = useState(CoffeStatus);
@@ -46,6 +46,7 @@ export function StatusPage() {
 
   function handleBack() {
     navigate("/");
+    setIdCart(0);
   }
 
   const formatTime = (seconds) => {

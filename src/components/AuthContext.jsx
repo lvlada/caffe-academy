@@ -29,7 +29,6 @@ export function AuthProvider({ children }) {
   }
 
   function handleOrder(newOrder){
-    console.log(newOrder);
     handleCart(newOrder);
   }
 
@@ -45,7 +44,6 @@ export function AuthProvider({ children }) {
   }
   useEffect(() => {
     handleTotalPrice();
-    console.log("Cart items: ",cart);
   }, [cart]);
 
   function handleTotalPrice() {

@@ -1,13 +1,11 @@
 import { Link } from "react-router-dom";
-import backButton from "../assets/back_dugme.png";
+import backButton from "../../assets/back_dugme.png";
 import { useNavigate } from 'react-router-dom';
-import { ProfilLoayality } from './ProfilLoyality';
-import { useAuth } from "./AuthContext";
+import { ProfilLoayality } from '../UI/ProfilLoyality';
+import { useAuth } from "../AuthContext";
 
 
-
-
-export function Profile() {
+export function ProfilePage() {
     const navigate = useNavigate();
     const {user, userLogin} = useAuth();
    
