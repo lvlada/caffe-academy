@@ -199,13 +199,13 @@ h6 {
   white-space: nowrap; 
   overflow: hidden; 
   text-overflow: ellipsis; 
-  max-width: 70%; 
+  max-width: 68%; 
 }
 .coffe-item-right-title.open h6 {
   white-space: normal; 
   overflow: visible;
   text-overflow: clip; 
-  max-width: 100%;
+  max-width: 90%;
 }
 .coffe-item-right-footer-coffe-size img.selected {
   filter: brightness(0.8); /* Promena boje */
