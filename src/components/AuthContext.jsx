@@ -1,5 +1,4 @@
-import { createContext, useState, useContext, useEffect } from "react";
-// import data from "../data/coffe-list.json";
+import { createContext, useState, useContext, useEffect, useMemo } from "react";
 import { fetchCoffeeTypes } from "../services/firebaseService";
 
 
@@ -82,7 +81,7 @@ export function AuthProvider({ children }) {
   }
   
 
-  const value = {
+  const value = useMemo(()=> ({
     data,
     user,
     isLogin,
@@ -98,7 +97,9 @@ export function AuthProvider({ children }) {
     handleOrder,  
     handleDelete,
     handleAllCarts
-  };
+  }), 
+  [data, user, isLogin, cart, totalPrice, orderId, allCarts, idCart]
+);
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
