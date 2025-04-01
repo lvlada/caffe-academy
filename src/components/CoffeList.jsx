@@ -1,6 +1,7 @@
 import { CoffeItem } from "./CoffeItem";
 import { useAuth } from "./AuthContext";
 
+
 export function CoffeList() {
     const { data } = useAuth();
  

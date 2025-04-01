@@ -1,11 +1,14 @@
 import { createContext, useState, useContext, useEffect } from "react";
-import data from "../data/coffe-list.json";
+// import data from "../data/coffe-list.json";
+import { fetchCoffeeTypes } from "../services/firebaseService";
+
 
 const AuthContext = createContext();
 
 export const useAuth = () => useContext(AuthContext);
 
 export function AuthProvider({ children }) {
+  const [data, setDate] = useState([]);
   const [isLogin, setIsLogin] = useState(false);
   const [user, setUser] = useState(null);
   const [cart, setCart] = useState([]);
@@ -15,6 +18,11 @@ export function AuthProvider({ children }) {
   const [allCarts, setAllCarts] = useState(() => {
     const savedCarts = sessionStorage.getItem('allCarts');
     return savedCarts ? JSON.parse(savedCarts) : [];
+  });
+
+  fetchCoffeeTypes().then((coffeeTypes) => {
+    console.log("From App:", coffeeTypes);
+    setDate(coffeeTypes);
   });
 
   useEffect(() => {
