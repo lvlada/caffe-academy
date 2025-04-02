@@ -1,18 +1,20 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from "react";
 import cafeLogo from "../assets/cafe_logo.png";
-import { useNavigate } from 'react-router-dom';
-import { useAuth } from './AuthContext';
-
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "./AuthContext";
 
 export function HeaderHomePage() {
   const navigate = useNavigate();
-  const {isLogin, user, handleLogin} = useAuth()
+
+  const { isLogin, user, handleLogin } = useAuth();
 
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const dropdownRef = useRef(null);
+  // console.log("Iz headera:",user);
+  // console.log("Iz headera:",user?.image);
 
   function handleLoginPage() {
-    navigate('/login');
+    navigate("/login");
   }
 
   function handleLogout() {
@@ -21,7 +23,7 @@ export function HeaderHomePage() {
   }
 
   function handleProfile() {
-    navigate('/profile');
+    navigate("/profile");
   }
 
   function toggleDropdown() {
@@ -34,43 +36,47 @@ export function HeaderHomePage() {
       }
     }
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [dropdownRef])
+  }, [dropdownRef]);
 
   return (
     <>
       <div className="navBarMainPage">
-        <div className='navBarMainPage-left'>
-           <img src={cafeLogo} className="logo" alt="Cafe Logo" />
+        <div className="navBarMainPage-left">
+          <img src={cafeLogo} className="logo" alt="Cafe Logo" />
         </div>
-        <div className='navBarMainPage-right'> 
-        {isLogin ? (
-          <>
-            <img
-              src={user?.image}
-              className="avatar"
-              alt="User Avatar"
-              onClick={toggleDropdown}
-            />
-            {dropdownVisible && (
-              <div className="dropdownMenu" ref={dropdownRef}>
-                <ul>
-                  <li onClick={handleProfile}><i className='fas fa-user' > </i>  Profil</li>
-                  <li onClick={handleLogout}> <i className='fas fa-sign-out-alt'></i>  Odjavi se</li>
-                </ul>
-              </div>
-            )}
-          </>
-        ) : (
-          <button className="loginButton" onClick={handleLoginPage}>
-            Prijavi se
-          </button>
-        )}
+        <div className="navBarMainPage-right">
+          {isLogin ? (
+            <>
+              <img
+                src={user?.image}
+                className="avatar"
+                alt="User Avatar"
+                onClick={toggleDropdown}
+              />
+              {dropdownVisible && (
+                <div className="dropdownMenu" ref={dropdownRef}>
+                  <ul>
+                    <li onClick={handleProfile}>
+                      <i className="fas fa-user"> </i> Profil
+                    </li>
+                    <li onClick={handleLogout}>
+                      {" "}
+                      <i className="fas fa-sign-out-alt"></i> Odjavi se
+                    </li>
+                  </ul>
+                </div>
+              )}
+            </>
+          ) : (
+            <button className="loginButton" onClick={handleLoginPage}>
+              Prijavi se
+            </button>
+          )}
         </div>
-
       </div>
     </>
   );

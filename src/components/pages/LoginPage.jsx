@@ -2,12 +2,11 @@ import cafeLogo from "../../assets/cafe_logo.png";
 import backButton from "../../assets/back_dugme.png";
 import Alert from "../../assets/Alert.png";
 import { useNavigate } from "react-router-dom";
-import users from "../../data/users.json";
 import { useState } from "react";
 import { useAuth } from "../AuthContext";
 
 export function LoginPage() {
-  const { handleLogin } = useAuth();
+  const { handleLogin, userData } = useAuth();
   const navigate = useNavigate();
   const [userEmail, setUserEmail] = useState(null);
   const [userPassword, setUserPassword] = useState(null);
@@ -18,12 +17,13 @@ export function LoginPage() {
   }
 
   function handleLoginPage() {
-    const user = users.find(
+    const user = userData.find(
       (user) => user.email === userEmail && user.password === userPassword
     );
     if (user) {
       handleLogin(true, user);
       navigate("/");
+      console.log(user);
     } else {
       setErrorMessage(true);
     }

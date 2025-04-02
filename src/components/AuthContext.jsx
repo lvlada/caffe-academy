@@ -1,5 +1,5 @@
 import { createContext, useState, useContext, useEffect, useMemo } from "react";
-import { fetchCoffeeTypes } from "../services/firebaseService";
+import { fetchCoffeeTypes, fetchUsers } from "../services/firebaseService";
 
 
 const AuthContext = createContext();
@@ -9,6 +9,7 @@ export const useAuth = () => useContext(AuthContext);
 export function AuthProvider({ children }) {
   const [data, setDate] = useState([]);
   const [isLogin, setIsLogin] = useState(false);
+  const [userData, setUserData] = useState();
   const [user, setUser] = useState(null);
   const [cart, setCart] = useState([]);
   const [orderId, setOrderId] = useState(1);
@@ -19,10 +20,17 @@ export function AuthProvider({ children }) {
     return savedCarts ? JSON.parse(savedCarts) : [];
   });
 
-  fetchCoffeeTypes().then((coffeeTypes) => {
-    console.log("From App:", coffeeTypes);
-    setDate(coffeeTypes);
-  });
+  useEffect(()=>{
+    fetchCoffeeTypes().then((coffeeTypes) => {
+      setDate(coffeeTypes);
+    });
+
+    fetchUsers().then((users) => {
+      setUserData(users);
+      console.log(users);
+    });
+  }, []);
+
 
   useEffect(() => {
     sessionStorage.setItem('allCarts', JSON.stringify(allCarts));
@@ -90,6 +98,7 @@ export function AuthProvider({ children }) {
     orderId,
     allCarts,
     idCart,
+    userData,
     setOrderId,
     setCart,
     setIdCart,
