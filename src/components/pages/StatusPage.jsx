@@ -12,7 +12,7 @@ import { useAuth } from "../AuthContext";
 
 export function StatusPage() {
   const navigate = useNavigate();
-  const {idCart, setIdCart} = useAuth();
+  const {idCart, setIdCart, user} = useAuth();
  
 
   const [time, setTime] = useState(30);
@@ -20,6 +20,12 @@ export function StatusPage() {
   const [statusImage, setStatusImage] = useState(orderPlaced);
   const [progressImage, setProgressImage] = useState(CoffeStatus);
   const [currentStep, setCurrentStep] = useState(0); 
+
+  useEffect(()=>{
+    if(!user){
+      navigate("/");
+    }
+  },[user])
 
   useEffect(() => {
     const timer = setInterval(() => {
