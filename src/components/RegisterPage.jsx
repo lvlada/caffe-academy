@@ -5,7 +5,7 @@ import { useState } from "react";
 import Alert from "../assets/Alert.png";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
-import users from "../data/users.json";
+import { useAuth } from "./AuthContext";
 
 
 const errorEmail = "Neispravan unos emaila";
@@ -13,6 +13,7 @@ const errorEmailAlreadyExiste = "Vec postoji nalog sa ovom email adresom";
 
 export function RegisterPage() {
   const navigate = useNavigate();
+  const {userData} = useAuth();
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -43,7 +44,7 @@ export function RegisterPage() {
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const userCheck = users.find((user) => user.email === email);
+    const userCheck = userData.find((user) => user.email === email);
     if (!emailRegex.test(email) || !email.endsWith(".com")) {
       setErrorMessageEmail(true);
       isValid = false;
