@@ -3,17 +3,26 @@ import backButton from "../../assets/back_dugme.png";
 import { useNavigate } from 'react-router-dom';
 import { ProfilLoayality } from '../UI/ProfilLoyality';
 import { useAuth } from "../AuthContext";
+import { signOutUser } from "../../services/firebaseService";
+import { useEffect } from "react";
 
 
 export function ProfilePage() {
     const navigate = useNavigate();
     const {user, userLogin} = useAuth();
+
+    useEffect(()=>{
+      if(!user){
+        navigate('/login');
+      }
+    },[user, navigate])
    
     function handleBack() {
       navigate('/');
     }
     function handleLogout() {
       userLogin(false);
+      signOutUser();
     }
 
   return (
@@ -30,8 +39,8 @@ export function ProfilePage() {
         </div>
 
         <div className="login-form">
-          <img src={user?.image} className="userLogo" alt="User logo" />
-          <h2>{user?.name || "Nema imena korisnika"}</h2>
+          <img   src={user?.image || "https://api.dicebear.com/9.x/adventurer/svg?seed=Mason"} className="userLogo" alt="User logo" />
+          <h2>{user?.displayName || "Nema imena korisnika"}</h2>
            <p>{user?.email || "Nema email korisnika"}</p>
 
            <h3>Loyalty program</h3>

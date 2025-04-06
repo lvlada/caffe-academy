@@ -2,16 +2,16 @@ import { useState, useEffect, useRef } from "react";
 import cafeLogo from "../assets/cafe_logo.png";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "./AuthContext";
+import { signOutUser } from "../services/firebaseService";
 
 export function HeaderHomePage() {
   const navigate = useNavigate();
+
 
   const { isLogin, user, handleLogin } = useAuth();
 
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const dropdownRef = useRef(null);
-  // console.log("Iz headera:",user);
-  // console.log("Iz headera:",user?.image);
 
   function handleLoginPage() {
     navigate("/login");
@@ -20,6 +20,7 @@ export function HeaderHomePage() {
   function handleLogout() {
     handleLogin(false);
     setDropdownVisible(false);
+    signOutUser();
   }
 
   function handleProfile() {
@@ -52,7 +53,10 @@ export function HeaderHomePage() {
           {isLogin ? (
             <>
               <img
-                src={user?.image}
+                src={
+                  user?.image ||
+                  "https://api.dicebear.com/9.x/adventurer/svg?seed=Mason"
+                }
                 className="avatar"
                 alt="User Avatar"
                 onClick={toggleDropdown}

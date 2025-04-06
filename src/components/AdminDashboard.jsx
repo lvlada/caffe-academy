@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { AdminDashboardTable } from "./AdminDashboardTable";
 import { useAuth } from "./AuthContext";
 import { useNavigate } from "react-router-dom";
+import { signOutUser } from "../services/firebaseService";
 
 export function AdminDashboard() {
   const navigate = useNavigate();
@@ -15,6 +16,7 @@ export function AdminDashboard() {
 
   function handleLogout() {
     userLogin(false);
+    signOutUser();
   }
   return (
     <>

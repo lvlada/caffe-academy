@@ -4,9 +4,10 @@ import Alert from "../../assets/Alert.png";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useAuth } from "../AuthContext";
+import { signInUser } from "../../services/firebaseService";
 
 export function LoginPage() {
-  const { handleLogin, userData } = useAuth();
+  const { handleLogin} = useAuth();
   const navigate = useNavigate();
   const [userEmail, setUserEmail] = useState(null);
   const [userPassword, setUserPassword] = useState(null);
@@ -16,14 +17,11 @@ export function LoginPage() {
     navigate("/");
   }
 
-  function handleLoginPage() {
-    const user = userData.find(
-      (user) => user.email === userEmail && user.password === userPassword
-    );
+  async function handleLoginPage() {
+    const user = await signInUser(userEmail, userPassword);
     if (user) {
       handleLogin(true, user);
       navigate("/");
-      console.log(user);
     } else {
       setErrorMessage(true);
     }

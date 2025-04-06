@@ -6,6 +6,7 @@ import Alert from "../assets/Alert.png";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 import { useAuth } from "./AuthContext";
+import {createUser} from "../services/firebaseService";
 
 
 const errorEmail = "Neispravan unos emaila";
@@ -72,6 +73,7 @@ export function RegisterPage() {
     }
 
     if (isValid) {
+      createUser(name, email, password);
       navigate("/confirmation-page");
     }
   }
