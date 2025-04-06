@@ -54,8 +54,14 @@ export async function createUser(name, email, password) {
     });
 
     console.log("You added a new user!");
+    return true;
   } catch (error) {
+    if (error.code === "auth/email-already-in-use") {
+      console.log("Error: Email already in use");
+      return false;
+    }
     console.log("Error: ", error.message);
+    throw error;
   }
 }
 

@@ -34,7 +34,7 @@ export function RegisterPage() {
     navigate("/login");
   }
 
-  function handleConfirmation() {
+  async function handleConfirmation() {
     let isValid = true;
 
     if (name.trim().length < 2 || name.trim().length > 50) {
@@ -73,8 +73,10 @@ export function RegisterPage() {
     }
 
     if (isValid) {
-      createUser(name, email, password);
+      const user = await createUser(name, email, password);
+      if(user){
       navigate("/confirmation-page");
+      }
     }
   }
 
