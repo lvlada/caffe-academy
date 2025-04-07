@@ -27,6 +27,7 @@ export function AuthProvider({ children }) {
 
     fetchUsers().then((users) => {
       setUserData(users);
+
     });
   }, []);
 

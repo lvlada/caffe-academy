@@ -10,6 +10,7 @@ import { useEffect } from "react";
 export function ProfilePage() {
     const navigate = useNavigate();
     const {user, userLogin} = useAuth();
+    console.log("Profil page: ", user)
 
     useEffect(()=>{
       if(!user){

@@ -28,11 +28,11 @@ export async function fetchUsers() {
   try {
     const colRef = collection(db, "users");
     const querySnapshot = await getDocs(colRef);
-    const coffeeTypes = [];
+    const user = [];
     querySnapshot.forEach((doc) => {
-      coffeeTypes.push({ id: doc.id, ...doc.data() });
+      user.push({ id: doc.id, ...doc.data() });
     });
-    return coffeeTypes;
+    return user;
   } catch (error) {
     console.error("Error fetching coffee types:", error.message);
     throw error; 
