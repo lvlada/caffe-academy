@@ -24,12 +24,14 @@ export function AuthProvider({ children }) {
     fetchCoffeeTypes().then((coffeeTypes) => {
       setDate(coffeeTypes);
     });
-
+    if(user){
     fetchUsers().then((users) => {
-      setUserData(users);
-
+      const logedUser = users.find((item) => item.id === user.uid)
+      setUserData(logedUser);
     });
-  }, []);
+    }
+
+  }, [user]);
 
 
   useEffect(() => {

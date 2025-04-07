@@ -9,8 +9,7 @@ import { useEffect } from "react";
 
 export function ProfilePage() {
     const navigate = useNavigate();
-    const {user, userLogin} = useAuth();
-    console.log("Profil page: ", user)
+    const {user, userLogin, userData} = useAuth();
 
     useEffect(()=>{
       if(!user){
@@ -40,9 +39,9 @@ export function ProfilePage() {
         </div>
 
         <div className="login-form">
-          <img   src={user?.image || "https://api.dicebear.com/9.x/adventurer/svg?seed=Mason"} className="userLogo" alt="User logo" />
-          <h2>{user?.displayName || "Nema imena korisnika"}</h2>
-           <p>{user?.email || "Nema email korisnika"}</p>
+          <img   src={userData?.image || "https://api.dicebear.com/9.x/adventurer/svg?seed=Mason"} className="userLogo" alt="User logo" />
+          <h2>{userData?.name || "Nema imena korisnika"}</h2>
+           <p>{userData?.email || "Nema email korisnika"}</p>
 
            <h3>Loyalty program</h3>
            <p>Pridružite se našem loyalty programu i uživajte u besplatnoj kafi! Svaka deseta kafa je na naš račun kao nagrada za vašu vernost.</p>

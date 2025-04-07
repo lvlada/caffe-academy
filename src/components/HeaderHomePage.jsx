@@ -8,7 +8,7 @@ export function HeaderHomePage() {
   const navigate = useNavigate();
 
 
-  const { isLogin, user, handleLogin } = useAuth();
+  const { isLogin, handleLogin, userData } = useAuth();
 
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const dropdownRef = useRef(null);
@@ -54,7 +54,7 @@ export function HeaderHomePage() {
             <>
               <img
                 src={
-                  user?.image ||
+                  userData?.image ||
                   "https://api.dicebear.com/9.x/adventurer/svg?seed=Mason"
                 }
                 className="avatar"
