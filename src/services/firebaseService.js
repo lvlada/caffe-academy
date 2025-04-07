@@ -1,4 +1,4 @@
-/* eslint-disable no-undef */
+
 import { collection, getDocs, doc, setDoc } from "firebase/firestore";
 import { db, auth } from "../firebaseConfig"; 
 import { 
@@ -34,7 +34,7 @@ export async function fetchUsers() {
     });
     return user;
   } catch (error) {
-    console.error("Error fetching coffee types:", error.message);
+    console.error("Error fetching user:", error.message);
     throw error; 
   }
 }
