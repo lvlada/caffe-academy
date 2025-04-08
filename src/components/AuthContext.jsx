@@ -24,12 +24,19 @@ export function AuthProvider({ children }) {
     fetchCoffeeTypes().then((coffeeTypes) => {
       setDate(coffeeTypes);
     });
-    if(user){
-    fetchUsers().then((users) => {
-      const logedUser = users.find((item) => item.id === user.uid)
-      setUserData(logedUser);
-    });
+    async function fetchUserData() {
+      if(user){
+        try{
+            const users = await fetchUsers();
+            const logedUser = users.find((item) => item.id === user.uid) || null;
+            setUserData(logedUser);
+        }
+        catch(error){
+          console.log("Error fetching user data: ", error.message)
+        }
+      }
     }
+    fetchUserData();
 
   }, [user]);
 

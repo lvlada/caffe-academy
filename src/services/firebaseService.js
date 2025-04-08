@@ -8,6 +8,8 @@ import {
   signInWithEmailAndPassword
 } from "firebase/auth";
 
+const MAX_USERS = 100;
+
 
 export async function fetchCoffeeTypes() {
   try {
@@ -40,6 +42,11 @@ export async function fetchUsers() {
 }
 
 export async function createUser(name, email, password) {
+  const querySnapshot = await getDocs(collection(db, "users"));
+  if(querySnapshot.size >= MAX_USERS){
+    alert("Registration is closed");
+    return;
+  }
   try {
     const cread = await createUserWithEmailAndPassword(auth, email, password);
     const user = cread.user;

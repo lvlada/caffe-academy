@@ -10,8 +10,8 @@ export function HomePage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (user?.email === "admin@gmail.com") {
-      navigate("/admin");
+      if (user?.email === "admin@gmail.com") {
+        navigate("/admin");
     }
   }, [user, navigate]);
   
